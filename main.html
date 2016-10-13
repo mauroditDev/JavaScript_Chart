@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<!-- librería para los charts -->
+<script src="Chart.js"></script>
+<!-- Mi código JS -->
+<script src="dataRequest.js"></script>
+
+</head>
+<body>
+<div id="prueba"></div>
+<h2>EJERCICIO 2</h2>
+<div style="float: left; width: 100%">
+	<button style="float: left" type="button" onclick="loadDoc(1,'https://www.googledrive.com/host/0B6u6_2LrMeVsdFFTOWcxUUtjdW8',3)">
+		Request data 1
+	</button>
+	<button style="float: left" type="button" onclick="loadDoc(2,'https://www.googledrive.com/host/0B6u6_2LrMeVsc3NkekQzVHBqV1E',3)">
+		Request data 2
+	</button>
+	<button style="float: left" type="button" onclick="loadDoc(3,'https://www.googledrive.com/host/0B6u6_2LrMeVscUZ1VEZDc0p1bDg',3)">
+		Request data 3
+	</button>
+</div>
+
+<table style="float: left">
+	<tr>
+		<td></td><th>data 1:</th><th>data 2:</th><th>data 3:</th>
+	</tr>
+	<tr>
+		<th>status</th><td id="d1-st"></td><td id="d2-st"></td><td id="d3-st"></td>
+	</tr>
+	<tr>
+		<th>readyState</th><td id="d1-rs"></td><td id="d2-rs"></td><td id="d3-rs"></td>
+	</tr>
+	<tr>
+		<th>expeced length</th><td id="d1-el"></td><td id="d2-el"></td><td id="d3-el"></td>
+	</tr>
+	<tr>
+		<th>OK</th><td id="d1-ok"></td><td id="d2-ok"></td><td id="d3-ok"></td>
+	</tr>
+</table>
+
+<div id="botonParsear" ></div>
+
+<div style="float: left; width: 100%">
+<p class="fila" id="result"></p><p class="fila" id="expected"></p><p class="fila" id="result2"></p><p class="fila" id="expected2"></p><p class="fila" id="result3"></p><p class="fila" id="expected3"></p>
+</div>
+<div style="float: left; width: 100%">
+<div id="botonChart" style="float: left"></div>
+<div id="botonPieChart" style="float: left" ></div>
+</div>
+<div style="width: 60%; height: 400px; float:left"><canvas id="linearChart"></canvas></div>
+<div style="width: 40%; height: 380px; float:left"><canvas id="pieChart"></canvas></div>
+
+<p id="result4"></p>
+
+</body>
+</html>

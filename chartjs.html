@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="width:400px; height:400px"><canvas id="myChart" ></canvas></div>
+<script src="Chart.js"></script>
+<script>
+var ctx = document.getElementById("myChart");
+var scatterChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+        },{
+			label: 'el mio',
+			data:[{
+				x: -10,
+				y: 4
+			},{
+				x: 1,
+				y: 1.5
+			},{
+				x: 10,
+				y: 10
+			}]
+		}]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
